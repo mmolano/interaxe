@@ -12,22 +12,32 @@
         <link href="{{asset('/css/animate.css')}}" rel="stylesheet">
         <title>Laravel</title>
 
+
+
     </head>
 <body>
 
 
-<?php
-$message = Session::get('message');
-if ($message){
-    echo $message;
-    Session::put('message', null);
-}
-?>
 
-        <div class="container">
-            <div id="form">
+        <div class="cont-cust">
+            <div class="row">
+                <div class="col" style="background-color: #401616; border-top-right-radius: 200px 493px; border-bottom-right-radius: 200px 493px;">
+                    <img class="divleft" src="{{ asset('img/Logo.png') }}" alt="">
+                </div>
+
+
+            <div id="form" class="col">
                 <div id="form_2">
                     <h1 class="titre animated fadeInLeft" style="margin-bottom: 30px;">Login</h1>
+
+                    @if ($message = Session::get('error'))
+
+                        <div style="margin-top: 10px; margin-bottom: 10px; color: #fff">
+                            <strong>{{ $message }}</strong>
+                        </div>
+
+                    @endif
+
                     <form action="{{url('/dashboard')}}" method="post" align="center">
                         {{ csrf_field() }}
 
@@ -37,15 +47,14 @@ if ($message){
                         <input class="input-style"
                                id="password" type="password" class="field" placeholder="Mot de passe" name="password">
 
-                        <button style="margin-top: 15px;height: 50px; width: 70%; font-size: 20px; border-radius: 0;" type="submit" class="submit btn btn-primary text-center">Connexion </button>
+                        <button class="cust-btn" type="submit" class="submit btn btn-primary text-center">Connexion </button>
 
                         <br>
                         <br>
                         <a href="{{ URL::to('/register') }}">Pas encore inscrit?</a><br>
-                        <a href="{{ URL::to('/forgpass') }}">Mot de passe oublié</a>
                     </form>
                 </div>
-
+            </div>
             </div>
         </div>
 

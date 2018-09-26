@@ -20,3 +20,7 @@ Route::post('/dashboard', 'LoginController@store');
 
 
 Route::get('/dashboard-co', 'DashboardController@index');
+Route::get('/logout', 'LoginController@Logout');
+
+Route::get('/register', 'RegisterController@create');
+Route::post('/regist', 'RegisterController@keep');
