@@ -16,8 +16,10 @@ class UserTableSeeder extends Seeder
         User::create(array(
             'name'     => 'Chris',
             'familyname' => 'John',
-            'email'    => 'salut@gmail.com',
+            'email'    => 'salutu@gmail.com',
+            'nbr_indice' => '2',
             'password' => Hash::make('oui'),
+
         ));
     }
 

@@ -13,7 +13,7 @@
     <title>Laravel</title>
 
 </head>
-<body>
+<body style="overflow-y: hidden">
 
 
 
@@ -48,6 +48,9 @@
 
                     <input class="input-style"
                            type="email" class="field" placeholder="Email" name="email"><br>
+
+                    <input class="input-style"
+                           type="text" class="field" placeholder="Nombre indices" name="nbr_indice"><br>
 
                     <input class="input-style"
                            id="password" type="password" class="field" placeholder="Mot de passe" name="password">
